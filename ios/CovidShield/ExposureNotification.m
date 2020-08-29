@@ -186,6 +186,15 @@ RCT_REMAP_METHOD(detectExposure, detectExposureWithConfiguration:(NSDictionary *
                                  completionHandler:^(ENExposureDetectionSummary * _Nullable summary, NSError * _Nullable error) {
     if (error) {
       reject([NSString stringWithFormat:@"%ld", (long)error.code], error.localizedDescription ,error);
+      UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                     message:error.localizedDescription
+                                                              preferredStyle:UIAlertControllerStyleAlert];
+      
+      [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+      
+      dispatch_async(dispatch_get_main_queue(), ^{
+          [RCTPresentedViewController() presentViewController:alert animated:TRUE completion:nil];
+      });
       return;
     }
     NSNumber *idx = @(self.reportedSummaries.count);
