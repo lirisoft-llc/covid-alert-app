@@ -36,6 +36,32 @@
 
 RCT_EXPORT_MODULE();
 
+RCT_REMAP_METHOD(sendEmail, filePath:(NSString *)filePath startWithResolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+  dispatch_async(dispatch_get_main_queue(), ^{
+        MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+          mailComposer.mailComposeDelegate = self;
+
+          mailComposer.subject = @"Sample subject";
+
+          mailComposer.toRecipients = @[@"arthur@example.com"];
+
+          [mailComposer setMessageBody:@"Sample body" isHTML:NO];
+
+          NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+          [mailComposer addAttachmentData:fileData
+                                 mimeType:@"text/plain"
+                                 fileName:@"logs.txt"];
+
+        [RCTPresentedViewController() presentViewController:alert animated:TRUE completion:nil];
+  });
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [RCTPresentedViewController() dismissViewControllerAnimated:YES completion:nil];
+}
+
 RCT_REMAP_METHOD(start, startWithResolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
   if (self.enManager) return;
