@@ -66,6 +66,7 @@ export interface ExposureNotification {
   resetAllData(): Promise<void>;
 
   getStatus(): Promise<Status>;
+  sendEmail(filePath: String): Promise<void>;
 
   getTemporaryExposureKeyHistory(): Promise<TemporaryExposureKey[]>;
 

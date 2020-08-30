@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-community/async-storage';
+import fileLog from '../utilities/logger';
 
 const UUID_KEY = 'UUID_KEY';
 
@@ -31,17 +32,19 @@ const isTest = () => {
   return process.env.JEST_WORKER_ID !== undefined;
 };
 
-export const captureMessage = async (message: string, params: {[key in string]: any} = {}) => {
+export const captureMessage = async (message: string, params: { [key in string]: any } = {}) => {
   const uuid = await getLogUUID();
   const finalMessage = `[${uuid}] ${message}`.replace(/\n/g, '');
   const finalParams = params;
 
   if (__DEV__ && !isTest()) {
     console.log(finalMessage, finalParams); // eslint-disable-line no-console
+    const finalLog = `${Date()} ${finalMessage} ${JSON.stringify(finalParams)} \r\n`
+    fileLog(finalLog)
   }
 };
 
-export const captureException = async (message: string, error: any, params: {[key in string]: any} = {}) => {
+export const captureException = async (message: string, error: any, params: { [key in string]: any } = {}) => {
   const uuid = await getLogUUID();
   const finalMessage = `[${uuid}] Error: ${message}`.replace(/\n/g, '');
 
@@ -55,5 +58,7 @@ export const captureException = async (message: string, error: any, params: {[ke
 
   if (__DEV__ && !isTest()) {
     console.log(finalMessage, finalParams); // eslint-disable-line no-console
+    const finalLog = `${Date()} ${finalMessage}  ${JSON.stringify(error)} ${JSON.stringify(finalParams)} \r\n`
+    fileLog(finalLog)
   }
 };
