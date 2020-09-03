@@ -65,14 +65,7 @@ const Content = ({setBackgroundColor, isBottomSheetExpanded}: ContentProps) => {
   setBackgroundColor('mainBackground');
 
   const getNoExposureView = (_regionCase: RegionCase) => {
-    switch (_regionCase) {
-      case 'noRegionSet':
-        return <NoExposureNoRegionView isBottomSheetExpanded={isBottomSheetExpanded} />;
-      case 'regionActive':
-        return <NoExposureCoveredRegionView isBottomSheetExpanded={isBottomSheetExpanded} />;
-      case 'regionNotActive':
-        return <NoExposureUncoveredRegionView isBottomSheetExpanded={isBottomSheetExpanded} />;
-    }
+    return <NoExposureCoveredRegionView isBottomSheetExpanded={isBottomSheetExpanded} />;
   };
 
   // this is for the test menu

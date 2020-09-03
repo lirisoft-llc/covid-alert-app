@@ -12,27 +12,17 @@ import {useRegionalI18n} from 'locale/regional';
 import {BaseHomeView} from '../components/BaseHomeView';
 
 export const ExposureView = ({isBottomSheetExpanded}: {isBottomSheetExpanded: boolean}) => {
-  const {region} = useStorage();
+  const {region} = 'ON';
   const i18n = useI18n();
   const regionalI18n = useRegionalI18n();
   const navigation = useNavigation();
-  const regionActive = isRegionActive(region, regionalI18n.activeRegions);
+  const regionActive = true;
   const getGuidanceURL = useCallback(() => {
-    if (region !== undefined && region !== 'None') {
-      return regionActive
-        ? regionalI18n.translate(`RegionContent.ExposureView.Active.${region}.URL`)
-        : regionalI18n.translate(`RegionContent.ExposureView.Inactive.${region}.URL`);
-    }
-    return i18n.translate(`RegionContent.ExposureView.Inactive.CA.URL`);
-  }, [i18n, region, regionActive, regionalI18n]);
+      return regionalI18n.translate(`RegionContent.ExposureView.Active.ON.URL`)
+    }, [i18n, region, regionActive, regionalI18n]);
 
   const getGuidanceCTA = useCallback(() => {
-    if (region !== undefined && region !== 'None') {
-      return regionActive
-        ? regionalI18n.translate(`RegionContent.ExposureView.Active.${region}.CTA`)
-        : regionalI18n.translate(`RegionContent.ExposureView.Inactive.${region}.CTA`);
-    }
-    return regionalI18n.translate(`RegionContent.ExposureView.Inactive.CA.CTA`);
+      return regionalI18n.translate(`RegionContent.ExposureView.Active.ON.CTA`)
   }, [region, regionActive, regionalI18n]);
 
   const regionalGuidanceCTA = getGuidanceCTA();
@@ -53,20 +43,13 @@ export const ExposureView = ({isBottomSheetExpanded}: {isBottomSheetExpanded: bo
         {i18n.translate(`Home.ExposureDetected.Title2`)}
       </Text>
       <Text>
-        {regionActive ? (
-          <Text>{regionalI18n.translate(`RegionContent.ExposureView.Active.${region}.Body`)}</Text>
-        ) : (
-          <>
-            <Text>{i18n.translate('Home.ExposureDetected.RegionNotCovered.Body2')}</Text>
-            <Text fontWeight="bold">{i18n.translate('Home.ExposureDetected.RegionNotCovered.Body3')}</Text>
-          </>
-        )}
+      <Text>{regionalI18n.translate(`RegionContent.ExposureView.Active.ON.Body`)}</Text>
       </Text>
 
       {regionalGuidanceCTA === '' ? (
         <ErrorBox marginTop="m" />
       ) : (
-        <Box alignSelf="stretch" marginTop="l" marginBottom={regionActive ? 'xxl' : 'm'}>
+        <Box alignSelf="stretch" marginTop="l" marginBottom='m'>
           <ButtonSingleLine
             text={regionalGuidanceCTA}
             variant="bigFlatPurple"
@@ -76,7 +59,7 @@ export const ExposureView = ({isBottomSheetExpanded}: {isBottomSheetExpanded: bo
         </Box>
       )}
 
-      {!regionActive && (
+      {(
         <Box alignSelf="stretch" marginBottom="m">
           <ButtonSingleLine
             text={i18n.translate(`Home.ExposureDetected.RegionNotCovered.HowToIsolateCTA`)}

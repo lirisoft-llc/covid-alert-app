@@ -7,16 +7,16 @@ const activeRegions = regionalI18n.activeRegions;
 describe('if region is active', () => {
   it('has the last paragraph text for ExposureView', async () => {
     activeRegions.forEach((region: string) => {
-      expect(regionalI18n.translate(`RegionContent.ExposureView.Active.${region}.Body`)).not.toStrictEqual('');
+      expect(regionalI18n.translate(`RegionContent.ExposureView.Active.ON.Body`)).not.toStrictEqual('');
     });
   });
 
   it('has all the required NoCode Content', async () => {
     activeRegions.forEach((region: string) => {
-      expect(regionalI18n.translate(`RegionContent.NoCode.Active.${region}.Title`)).not.toStrictEqual('');
-      expect(regionalI18n.translate(`RegionContent.NoCode.Active.${region}.Body`)).not.toStrictEqual('');
-      expect(regionalI18n.translate(`RegionContent.NoCode.Active.${region}.CTA`)).not.toStrictEqual('');
-      expect(regionalI18n.translate(`RegionContent.NoCode.Active.${region}.Link`)).not.toStrictEqual('');
+      expect(regionalI18n.translate(`RegionContent.NoCode.Active.ON.Title`)).not.toStrictEqual('');
+      expect(regionalI18n.translate(`RegionContent.NoCode.Active.ON.Body`)).not.toStrictEqual('');
+      expect(regionalI18n.translate(`RegionContent.NoCode.Active.ON.CTA`)).not.toStrictEqual('');
+      expect(regionalI18n.translate(`RegionContent.NoCode.Active.ON.Link`)).not.toStrictEqual('');
     });
   });
 });

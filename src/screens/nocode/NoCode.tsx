@@ -18,15 +18,8 @@ const Content = () => {
   const regionalI18n = useRegionalI18n();
   const regionCase = getRegionCase(region, regionalI18n.activeRegions);
   switch (regionCase) {
-    case 'regionNotActive':
-      return <RegionNotCoveredView />;
-    case 'regionActive':
-      if (region === 'ON') {
-        return <ActiveListView />;
-      }
-      return <ActiveParagraphView />;
     default:
-      return <NoRegionView />;
+       return <ActiveListView />;
   }
 };
 

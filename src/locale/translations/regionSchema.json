@@ -43,6 +43,7 @@
   "required": [
     "Active",
     "en",
-    "fr"
+    "fr",
+    "es"
   ]
 }

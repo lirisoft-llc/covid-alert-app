@@ -50,7 +50,7 @@ export const LanguageScreen = () => {
   const close = useCallback(() => navigation.goBack(), [navigation]);
   const {setLocale} = useStorage();
   const toggle = useCallback(
-    (newLocale: 'en' | 'fr') => () => {
+    (newLocale: 'en' | 'fr' | 'es') => () => {
       setLocale(newLocale);
     },
     [setLocale],
@@ -93,6 +93,11 @@ export const LanguageScreen = () => {
               onPress={toggle('fr')}
               text={i18n.translate('LanguageSelect.Fr')}
               isActive={i18n.locale === 'fr'}
+            />
+            <LanguageSelectItem
+              onPress={toggle('es')}
+              text={i18n.translate('LanguageSelect.Es')}
+              isActive={i18n.locale === 'es'}
               lastItem
             />
           </Box>
