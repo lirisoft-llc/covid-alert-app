@@ -251,7 +251,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = J7J9Q6KTWJ;
+						DevelopmentTeam = RAKTW7QARM;
 						LastSwiftMigration = 1120;
 						ProvisioningStyle = Manual;
 					};
@@ -507,7 +507,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = J7J9Q6KTWJ;
+				DEVELOPMENT_TEAM = RAKTW7QARM;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -521,9 +521,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ca.gc.hcsc.canada.stopcovid;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lirisoft.rastreaelvirus-pr-covidalert";
 				PRODUCT_NAME = CovidShield;
-				PROVISIONING_PROFILE_SPECIFIER = "Stop COVID Development Profile";
+				PROVISIONING_PROFILE_SPECIFIER = covidalertDevProfile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -539,7 +539,7 @@
 				CODE_SIGN_ENTITLEMENTS = CovidShield/CovidShield.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = J7J9Q6KTWJ;
+				DEVELOPMENT_TEAM = RAKTW7QARM;
 				INFOPLIST_FILE = CovidShield/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -548,9 +548,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_IOS)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lirisoft.rastreaelvirus-pr-covidalert";
 				PRODUCT_NAME = CovidShield;
-				PROVISIONING_PROFILE_SPECIFIER = "Stop COVID App Store Profile";
+				PROVISIONING_PROFILE_SPECIFIER = covidalertAdHoc;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

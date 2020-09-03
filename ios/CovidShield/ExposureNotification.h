@@ -8,11 +8,12 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
 #import <ExposureNotification/ExposureNotification.h>
+#import <MessageUI/MessageUI.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface ExposureNotification : NSObject<RCTBridgeModule>
+@interface ExposureNotification : NSObject<RCTBridgeModule, MFMailComposeViewControllerDelegate>
 @property (nonatomic, nullable, strong) ENManager *enManager;
 @end
 
