@@ -28,6 +28,10 @@ Notification](https://www.apple.com/covid19/contacttracing) framework, informed 
 
 This app is built using React Native and designed to work well with patterns on both Android and iOS devices. It works alongside the [COVID Alert Diagnosis Server](https://github.com/cds-snc/covid-alert-server) to provide a reference for how a client application for exposure notifications could work.
 
+## Customization
+
+This app is modified to connect to the google [Exposure Notifications API](https://github.com/google/exposure-notifications-server). The primitive changes are don to connect to the exposure notification server, still exception, edges cases are yet to be done.
+
 ## Local development
 
 ### Prerequisites
