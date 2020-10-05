@@ -18,7 +18,7 @@ export const OnboardingScreen = () => {
   const carouselRef = useRef<CarouselStatic<OnboardingKey>>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const i18n = useI18n();
-  const {setOnboarded, setOnboardedDatetime} = useStorage();
+  const {setOnboarded, setOnboardedDatetime, setRegion} = useStorage();
   const startExposureNotificationService = useStartExposureNotificationService();
   const isStart = currentStep === 0;
   const isEnd = currentStep === onboardingData.length - 1;
@@ -45,9 +45,10 @@ export const OnboardingScreen = () => {
 
       // we want region cleared on the 2nd last step
       if (index === onboardingData.length - 2) {
+        setRegion(undefined);
       }
     },
-    [startExposureNotificationService],
+    [setRegion, startExposureNotificationService],
   );
 
   const nextItem = useCallback(async () => {

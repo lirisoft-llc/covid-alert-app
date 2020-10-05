@@ -4,12 +4,12 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>com.lirisoft.rastreaelvirus-pr-covidalert.exposure-notification</string>
+		<string>com.bundleid.example.exposure-notification</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>RASTREÆL Virus</string>
+	<string>Covid Alert</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,6 +26,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>2</string>
+	<key>ENDeveloperRegion</key>
+	<string>US</string>
+	<key>ENAPIVersion</key>
+	<integer>2</integer>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>instagram</string>
@@ -59,9 +63,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>ENDeveloperRegion</key>
-	<string>CA</string>
-	<key>ENAPIVersion</key>
-	<integer>1</integer>
 </dict>
 </plist>

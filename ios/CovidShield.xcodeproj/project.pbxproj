@@ -16,6 +16,8 @@
 		4A5C897C24B63BE00074FF89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A5C897E24B63BE00074FF89 /* InfoPlist.strings */; };
 		7482404F246F9C0E009F68EA /* CovidShield.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482404E246F9C0E009F68EA /* CovidShield.m */; };
 		74B6941E245F15B20077B9DA /* ExposureNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B6941D245F15B20077B9DA /* ExposureNotification.m */; };
+		84D61B8F252213EC00A315DA /* KeyDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D61B8D252213EC00A315DA /* KeyDownloadManager.swift */; };
+		84D61B90252213EC00A315DA /* DownloadedPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D61B8E252213EC00A315DA /* DownloadedPackage.swift */; };
 		92B51DEAB84B429696C44822 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 190AEBD50CE3434EBCFCFBB4 /* NotoSans-Bold.ttf */; };
 		9DCF98527548A48AED34959C /* libPods-CovidShield-CovidShieldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A1C8C77A874BCC9042935F /* libPods-CovidShield-CovidShieldTests.a */; };
 		A10A691626414D8AABBB659C /* Device-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = 431D5AB0AA364B5C9E7BFF1D /* Device-Large.png */; };
@@ -63,6 +65,10 @@
 		74B6941C245F15B20077B9DA /* ExposureNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExposureNotification.h; path = CovidShield/ExposureNotification.h; sourceTree = "<group>"; };
 		74B6941D245F15B20077B9DA /* ExposureNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ExposureNotification.m; path = CovidShield/ExposureNotification.m; sourceTree = "<group>"; };
 		77A1C8C77A874BCC9042935F /* libPods-CovidShield-CovidShieldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CovidShield-CovidShieldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D61B8C252213EB00A315DA /* CovidShield-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CovidShield-Bridging-Header.h"; sourceTree = "<group>"; };
+		84D61B8D252213EC00A315DA /* KeyDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyDownloadManager.swift; sourceTree = "<group>"; };
+		84D61B8E252213EC00A315DA /* DownloadedPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadedPackage.swift; sourceTree = "<group>"; };
+		84D61BDE2522207700A315DA /* CovidShieldDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = CovidShieldDebug.entitlements; path = CovidShield/CovidShieldDebug.entitlements; sourceTree = "<group>"; };
 		94B4DC3E27534960AEAA5640 /* img_0.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = img_0.png; path = ../src/assets/animation/images/img_0.png; sourceTree = "<group>"; };
 		DB9A1444C934C41C93EB531F /* Pods-CovidShield.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidShield.debug.xcconfig"; path = "Target Support Files/Pods-CovidShield/Pods-CovidShield.debug.xcconfig"; sourceTree = "<group>"; };
 		E93E71E0D77549B3926CABCB /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Regular.ttf"; path = "../src/assets/fonts/NotoSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				179621B4246C643100B9FC0D /* CovidShield.entitlements */,
+				84D61BDE2522207700A315DA /* CovidShieldDebug.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -162,6 +169,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				84D61B8B252213DA00A315DA /* Manager */,
 				74B6941C245F15B20077B9DA /* ExposureNotification.h */,
 				74B6941D245F15B20077B9DA /* ExposureNotification.m */,
 				7482404D246F9C0E009F68EA /* CovidShield.h */,
@@ -193,6 +201,17 @@
 				00E356EE1AD99517003FC87E /* CovidShieldTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		84D61B8B252213DA00A315DA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				84D61B8E252213EC00A315DA /* DownloadedPackage.swift */,
+				84D61B8D252213EC00A315DA /* KeyDownloadManager.swift */,
+				84D61B8C252213EB00A315DA /* CovidShield-Bridging-Header.h */,
+			);
+			name = Manager;
+			path = CovidShield/Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +271,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = RAKTW7QARM;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -417,6 +436,8 @@
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				7482404F246F9C0E009F68EA /* CovidShield.m in Sources */,
 				74B6941E245F15B20077B9DA /* ExposureNotification.m in Sources */,
+				84D61B8F252213EC00A315DA /* KeyDownloadManager.swift in Sources */,
+				84D61B90252213EC00A315DA /* DownloadedPackage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA11CCD8EB9EB39453E3C0AA /* Pods-CovidShield-CovidShieldTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -480,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4340865F2E3AB248EDD2005B /* Pods-CovidShield-CovidShieldTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = CovidShieldTests/Info.plist;
@@ -506,7 +529,7 @@
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = CovidShield/CovidShieldDebug.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = RAKTW7QARM;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -516,15 +539,16 @@
 				INFOPLIST_FILE = "CovidShield/Info-debug.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lirisoft.rastreaelvirus-pr-covidalert";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bundleid.example;
 				PRODUCT_NAME = CovidShield;
 				PROVISIONING_PROFILE_SPECIFIER = covidalertDevProfile;
+				SWIFT_OBJC_BRIDGING_HEADER = "CovidShield/Manager/CovidShield-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -539,20 +563,21 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CovidShield/CovidShield.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = RAKTW7QARM;
 				INFOPLIST_FILE = CovidShield/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lirisoft.rastreaelvirus-pr-covidalert";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bundleid.example;
 				PRODUCT_NAME = CovidShield;
 				PROVISIONING_PROFILE_SPECIFIER = covidalertAdHoc;
+				SWIFT_OBJC_BRIDGING_HEADER = "CovidShield/Manager/CovidShield-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -607,11 +632,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
-					"\"$(inherited)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -660,11 +681,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
-					"\"$(inherited)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

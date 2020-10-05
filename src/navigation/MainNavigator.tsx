@@ -3,15 +3,17 @@ import {StatusBar} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {HomeScreen} from 'screens/home';
 import {TutorialScreen} from 'screens/tutorial';
-import {Step1Screen, FormScreen, ConsentScreen} from 'screens/datasharing';
+import {Step1Screen, FormScreen, ConsentScreen, SymptomOnsetDateScreen} from 'screens/datasharing';
 import {PrivacyScreen} from 'screens/privacy';
 import {LanguageScreen} from 'screens/language';
 import {useStorage} from 'services/StorageService';
+import {RegionPickerSettingsScreen} from 'screens/regionPicker';
 import {NoCodeScreen} from 'screens/nocode/NoCode';
 import {HowToIsolate} from 'screens/howToIsolate/HowToIsolate';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {OnboardingScreen} from 'screens/onboarding';
 import {LandingScreen} from 'screens/landing';
+import {TestScreen} from 'screens/testScreen';
 
 const MainStack = createStackNavigator();
 
@@ -61,10 +63,13 @@ const TutorialScreenWithNavBar = withDarkNav(TutorialScreen);
 const Step1ScreenWithNavBar = withDarkNav(Step1Screen);
 const FormScreenWithNavBar = withDarkNav(FormScreen);
 const ConsentScreenWithNavBar = withDarkNav(ConsentScreen);
+const SymptomOnsetDateScreenWithNavBar = withDarkNav(SymptomOnsetDateScreen);
 const PrivacyScreenWithNavBar = withDarkNav(PrivacyScreen);
 const LanguageScreenWithNavBar = withDarkNav(LanguageScreen);
+const RegionPickerSettingsScreenWithNavBar = withDarkNav(RegionPickerSettingsScreen);
 const NoCodeWithNavBar = withDarkNav(NoCodeScreen);
 const HowToIsolateWithNavBar = withDarkNav(HowToIsolate);
+const TestScreenWithNavBar = withDarkNav(TestScreen);
 
 const OnboardingWithNavBar = withDarkNavNonModal(OnboardingScreen);
 
@@ -83,6 +88,7 @@ const DataSharingNavigator = () => {
       <DataSharingStack.Screen name="Step1" component={Step1ScreenWithNavBar} />
       <DataSharingStack.Screen name="FormView" component={FormScreenWithNavBar} />
       <DataSharingStack.Screen name="ConsentView" component={ConsentScreenWithNavBar} />
+      <DataSharingStack.Screen name="SymptomOnsetDate" component={SymptomOnsetDateScreenWithNavBar} />
     </DataSharingStack.Navigator>
   );
 };
@@ -112,8 +118,10 @@ const MainNavigator = () => {
       <MainStack.Screen name="DataSharing" component={DataSharingNavigator} />
       <MainStack.Screen name="Privacy" component={PrivacyScreenWithNavBar} />
       <MainStack.Screen name="LanguageSelect" component={LanguageScreenWithNavBar} />
+      <MainStack.Screen name="RegionSelect" component={RegionPickerSettingsScreenWithNavBar} />
       <MainStack.Screen name="NoCode" component={NoCodeWithNavBar} />
       <MainStack.Screen name="HowToIsolate" component={HowToIsolateWithNavBar} />
+      <MainStack.Screen name="TestScreen" component={TestScreenWithNavBar} />
     </MainStack.Navigator>
   );
 };

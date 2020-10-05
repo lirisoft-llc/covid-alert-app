@@ -1,7 +1,7 @@
-import React, {useCallback, useState} from 'react';
+import React, { useCallback, useState } from 'react';
 
-import {Box} from './Box';
-import {TextInput} from './TextInput';
+import { Box } from './Box';
+import { TextInput } from './TextInput';
 
 export interface CodeInputProps {
   value: string;
@@ -9,7 +9,7 @@ export interface CodeInputProps {
   accessibilityLabel: string;
 }
 
-export const CodeInput = ({value, onChange, accessibilityLabel}: CodeInputProps) => {
+export const CodeInput = ({ value, onChange, accessibilityLabel }: CodeInputProps) => {
   const onChangeTrimmed = useCallback(text => onChange(text.trim()), [onChange]);
   const [isFocus, setIsFocus] = useState(false);
   const onFocus = useCallback(() => setIsFocus(true), []);
@@ -41,9 +41,10 @@ export const CodeInput = ({value, onChange, accessibilityLabel}: CodeInputProps)
             returnKeyType="done"
             accessibilityHint={accessibilityLabel}
             padding="s"
-            maxLength={12}
+            maxLength={8}
             fontSize={26}
             borderWidth={0}
+            keyboardType="numeric"
             autoCapitalize="characters"
             fontFamily="Menlo"
             letterSpacing={5}

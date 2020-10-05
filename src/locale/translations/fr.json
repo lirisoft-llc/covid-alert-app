@@ -1,12 +1,12 @@
 {
   "BottomSheet": {
     "Collapse": "Fermer",
-    "OffStatus": "Rastrea el Virus est DÉSACTIVÉE, Appuyez pour voir le menu",
-    "OnStatus": "Rastrea el Virus est ACTIVÉE, Appuyez pour voir le menu"
+    "OffStatus": "Alerte COVID est DÉSACTIVÉE, Appuyez pour voir le menu",
+    "OnStatus": "Alerte COVID est ACTIVÉE, Appuyez pour voir le menu"
   },
   "RegionLanding": {
     "Title": "Sélectionnez votre province ou territoire",
-    "Body1": "Les gouvernements provinciaux et territoriaux s’efforcent de rendre Rastrea el Virus utilisable partout au Canada.",
+    "Body1": "Les gouvernements provinciaux et territoriaux s’efforcent de rendre Alerte COVID utilisable partout au Canada.",
     "Body2": "Dans certains endroits, on ne peut pas encore signaler de diagnostics de COVID-19 avec cette application.",
     "RegionSelectBtn": "Sélectionnez une province ou un territoire"
   },
@@ -19,7 +19,7 @@
       "Body1a": "Étape 1 : ",
       "Body1b": "Vous entrez la clé à usage unique reçue lors de votre diagnostic.",
       "Body2a": "Étape 2 : ",
-      "Body2b": "Vous acceptez qu’Rastrea el Virus avise les personnes qu’elles ont été exposées.",
+      "Body2b": "Vous acceptez qu’Alerte COVID avise les personnes qu’elles ont été exposées.",
       "Body3a": "Étape 3 : ",
       "Body3b": "Vous autorisez votre téléphone à partager vos codes aléatoires.",
       "Body4a": "Personne ne recevra d’information sur vous ",
@@ -31,7 +31,7 @@
       "Title": "Entrez votre clé à usage unique",
       "Body": "Entrez la clé que vous avez reçue lors de votre diagnostic.",
       "Action": "Envoyer",
-      "InputLabel": "code Rastrea el Virus"
+      "InputLabel": "code Alerte COVID"
     },
     "ConsentView": {
       "Title": "Vous pouvez maintenant téléverser vos codes",
@@ -95,7 +95,7 @@
     }
   },
   "Home": {
-    "AppName": "Rastrea el Virus",
+    "AppName": "Alerte COVID",
     "BluetoothDisabled": "Bluetooth désactivé",
     "CTA": "Prochaines étapes",
     "ChooseRegionCTA": "Sélectionnez une province ou un territoire",
@@ -118,7 +118,7 @@
       "Body3": "Pour contribuer à la sécurité des autres, vous devez téléverser vos codes aléatoires tous les jours, surtout si vous avez à sortir de la maison.",
       "ButtonCTA": "Téléverser vos codes aléatoires"
     },
-    "EnableBluetoothCTA": "Vous devez activer la fonction Bluetooth dans les paramètres de votre téléphone pour qu’Rastrea el Virus fonctionne.",
+    "EnableBluetoothCTA": "Vous devez activer la fonction Bluetooth dans les paramètres de votre téléphone pour qu’Alerte COVID fonctionne.",
     "ExposureDetected": {
       "Title": "Vous avez été exposé au cours des 14\u00A0derniers jours",
       "Title2": "Que faire maintenant?",
@@ -132,20 +132,26 @@
         "Body2": "Vous êtes à risque d’être infecté."
       }
     },
+    "ExposedHelpCTA": "Que faire en cas d’exposition",
+    "EnUnauthorized": {
+      "Title": "Alerte COVID est désactivée",
+      "Body1": "Appuyez sur le bouton ci-dessous, puis sélectionnez Notifications d’exposition. Faites défiler l’écran et activez « Partager les informations sur les expositions ».",
+      "CTA": "Activer Alerte COVID"
+    },
     "EnDisabled": {
-      "Title": "Rastrea el Virus est désactivée",
-      "Body1": "Vous n’avez pas activé Rastrea el Virus. L’application a besoin de votre autorisation pour fonctionner.",
-      "CTA": "Activer Rastrea el Virus",
+      "Title": "Alerte COVID est désactivée",
+      "Body1": "Vous n’avez pas activé Alerte COVID. L’application a besoin de votre autorisation pour fonctionner.",
+      "CTA": "Activer Alerte COVID",
       "AndroidTitle2": "Vous hésitez à activer la localisation?",
-      "AndroidBody1": "Il faut activer la localisation pour qu’Rastrea el Virus fonctionne. Avec Android, la recherche Bluetooth n’est possible que si la localisation est activée pour toutes les applications.",
-      "AndroidBody2a": "Malgré cela, Rastrea el Virus ",
+      "AndroidBody1": "Il faut activer la localisation pour qu’Alerte COVID fonctionne. Avec Android, la recherche Bluetooth n’est possible que si la localisation est activée pour toutes les applications.",
+      "AndroidBody2a": "Malgré cela, Alerte COVID ",
       "AndroidBody2b": "ne peut pas savoir où vous êtes. ",
-      "AndroidBody2c": "Vous pouvez vous en assurer en vérifiant les autorisations d’Rastrea el Virus dans les paramètres de votre téléphone. La localisation n’est pas autorisée."
+      "AndroidBody2c": "Vous pouvez vous en assurer en vérifiant les autorisations d’Alerte COVID dans les paramètres de votre téléphone. La localisation n’est pas autorisée."
     },
     "ExternalLinkHint": "Ouvre dans une nouvelle fenêtre",
     "FrameworkUnavailable": {
       "Title": "Une erreur s’est produite",
-      "Body": "Rastrea el Virus n’est pas prise en charge par le système d’exploitation de votre téléphone.\n\nVérifiez que votre système d’exploitation est à jour.\n\nSi vous avez un téléphone Android, pensez à mettre les services Google Play à jour.",
+      "Body": "Alerte COVID n’est pas prise en charge par le système d’exploitation de votre téléphone.\n\nVérifiez que votre système d’exploitation est à jour.\n\nSi vous avez un téléphone Android, pensez à mettre les services Google Play à jour.",
       "CTA": "Trouver de l’aide"
     },
     "How": "Diagnosed with COVID-19?",
@@ -162,14 +168,14 @@
       "One": "Dernière vérification il y a {number} minute",
       "Other": "Dernière vérification il y a {number} minutes"
     },
-    "NoConnectivity": "Rastrea el Virus est hors ligne",
-    "NoConnectivityDetailed": "Rastrea el Virus vérifie s’il y a des expositions seulement quand votre téléphone est connecté à Internet.",
+    "NoConnectivity": "Alerte COVID est hors ligne",
+    "NoConnectivityDetailed": "Alerte COVID vérifie s’il y a des expositions seulement quand votre téléphone est connecté à Internet.",
     "NoExposureDetected": {
       "AllSetTitle": "Vous voilà prêt!",
       "NoRegion": {
         "Body": "Vous n’avez été près d’aucune personne ayant signalé un diagnostic de COVID-19 avec cette application.\n\nToutefois, dans certaines provinces et certains territoires, on ne peut pas encore signaler de diagnostics de COVID-19 avec cette application.",
         "Title": "Aucune exposition détectée",
-        "AllSetBody": "Nous vous informerons dès que les personnes en dehors de l’Ontario peuvent signaler des diagnostics avec Rastrea el Virus.\n\nIl est tout de même utile de garder Rastrea el Virus activée.\n\nDe cette façon, vous pourrez être avisé dès que les personnes dont vous avez été près signalent un diagnostic."
+        "AllSetBody": "Nous vous informerons dès que les personnes en dehors de l’Ontario peuvent signaler des diagnostics avec Alerte COVID.\n\nIl est tout de même utile de garder Alerte COVID activée.\n\nDe cette façon, vous pourrez être avisé dès que les personnes dont vous avez été près signalent un diagnostic."
       },
       "RegionCovered": {
         "Body": "Vous n’avez été près d’aucune personne ayant signalé un diagnostic de COVID-19 avec cette application.",
@@ -178,17 +184,17 @@
         "AllSetBody": "Votre téléphone utilise maintenant Bluetooth pour collecter les codes provenant des téléphones voisins."
       },
       "RegionNotCovered": {
-        "Body": "Les personnes de votre province ou territoire ne peuvent pas encore signaler de diagnostics de COVID-19 avec cette application.\n\nIl est tout de même utile d’activer Rastrea el Virus. Quand les personnes pourront signaler un diagnostic, vous serez ainsi avisé si jamais vous avez été près d’elles.",
+        "Body": "Les personnes de votre province ou territoire ne peuvent pas encore signaler de diagnostics de COVID-19 avec cette application.\n\nIl est tout de même utile d’activer Alerte COVID. Quand les personnes pourront signaler un diagnostic, vous serez ainsi avisé si jamais vous avez été près d’elles.",
         "GuidanceUrl": "https://www.canada.ca/fr/sante-publique/services/publications/maladies-et-affections/covid-19-comment-isoler-chez-soi.html",
         "Title": "Pas encore de signalement dans votre région",
-        "AllSetBody": "Nous vous informerons dès que les personnes de votre région peuvent signaler un diagnostic avec Rastrea el Virus.\n\nIl est tout de même utile de garder Rastrea el Virus activée.\n\nDe cette façon, vous pourrez être avisé dès que les personnes dont vous avez été près signalent un diagnostic."
+        "AllSetBody": "Nous vous informerons dès que les personnes de votre région peuvent signaler un diagnostic avec Alerte COVID.\n\nIl est tout de même utile de garder Alerte COVID activée.\n\nDe cette façon, vous pourrez être avisé dès que les personnes dont vous avez été près signalent un diagnostic."
       }
     },
     "SymptomTrackerUrl": "https://ca.thrive.health/covid19app/action/88a5e9a7-db9e-487b-bc87-ce35035f8e5c?from=/home&navigateTo=/tracker/complete",
     "TurnOnBluetooth": "Activez Bluetooth",
     "UnknownProblem": {
       "Title": "Une erreur s’est produite",
-      "Body": "Il semble que votre téléphone ne puisse pas prendre en charge Rastrea el Virus.",
+      "Body": "Il semble que votre téléphone ne puisse pas prendre en charge Alerte COVID.",
       "CTA": "Trouver de l’aide"
     }
   },
@@ -213,7 +219,7 @@
     "SymptomsUrl": "https://ca.thrive.health/covid19/fr",
     "TellAFriend": "Partager l’application",
     "SettingsTitle": "Paramètres",
-    "InformationTitle": "À propos d’Rastrea el Virus"
+    "InformationTitle": "À propos d’Alerte COVID"
   },
   "Landing": {
     "En": "English",
@@ -225,8 +231,6 @@
     "Close": "Fermer",
     "En": "English (Canada)",
     "EnShort": "English",
-    "Es": "Español (Puerto  Rico)",
-    "EsShort": "Español",
     "Fr": "Français (Canada)",
     "FrShort": "Français",
     "PtBR": "Portugais (Brésil)",
@@ -238,8 +242,8 @@
     "DailyUploadNotificationTitle": "Téléversez vos nouveaux codes aléatoires",
     "ExposedMessageBody": "Vous avez eu un contact étroit avec une personne qui a signalé un diagnostic de COVID-19 au moyen de l’application. Informez-vous sur les étapes à suivre.",
     "ExposedMessageTitle": "Vous avez été exposé",
-    "OffMessageBody": "Activez Rastrea el Virus pour être avisé en cas d’exposition potentielle à la COVID-19.",
-    "OffMessageTitle": "Rastrea el Virus est désactivée"
+    "OffMessageBody": "Activez Alerte COVID pour être avisé en cas d’exposition potentielle à la COVID-19.",
+    "OffMessageTitle": "Alerte COVID est désactivée"
   },
   "Onboarding": {
     "Step": "Étape",
@@ -251,11 +255,11 @@
     "Start": {
       "Title": "Unissons-nous pour freiner la propagation de la COVID-19",
       "ImageAltText": "Dessin à la main avec plusieurs personnes différentes dedans. Leurs chemins en lignes pointillées se croisent et mènent à un téléphone intelligent plus bas.",
-      "Body1": "Rastrea el Virus nous aide à briser le cycle d’infection. L’application permet d’aviser les personnes en cas d’exposition potentielle avant même que des symptômes apparaissent. ",
+      "Body1": "Alerte COVID nous aide à briser le cycle d’infection. L’application permet d’aviser les personnes en cas d’exposition potentielle avant même que des symptômes apparaissent. ",
       "Body2": "Nous pouvons ainsi prendre soin de nous et protéger nos communautés."
     },
     "WhatItsNot": {
-      "Title": "Ce qu’Rastrea el Virus ne fait pas",
+      "Title": "Ce qu’Alerte COVID ne fait pas",
       "ImageAltText": "Dessin à la main d’une rue sinueuse avec plusieurs maisons et un immeuble en hauteur. De petites infobulles apparaissent au-dessus de chaque bâtiment.",
       "Body1": "L’application ne vous dira pas sur-le-champ que vous êtes près d’une personne ayant eu un diagnostic.",
       "Body2": "Elle ne vous renseignera pas sur les éclosions de COVID-19 dans votre collectivité."
@@ -263,7 +267,7 @@
     "Anonymous": {
       "Title": "Votre vie privée est protégée",
       "ImageAltText": "Dessin à la main d’une paire de lunettes de soleil et d’un chapeau pour passer incognito. Au-dessus du chapeau, une icône de marqueur de géolocalisation est biffée.",
-      "Body1": "Rastrea el Virus **n’utilise pas le GPS** et ne suit pas votre emplacement.",
+      "Body1": "Alerte COVID **n’utilise pas le GPS** et ne suit pas votre emplacement.",
       "Body2": "L’application **n’a aucun moyen** de connaître\u00A0:",
       "Bullet1": "Votre emplacement.",
       "Bullet2": "Votre nom ou votre adresse.",
@@ -281,10 +285,10 @@
     },
     "PartOf": {
       "Title": "L’un des efforts de santé publique",
-      "ImageAltText": "Dessin à la main de divers moyens de lutter contre la COVID-19, dont un désinfectant pour les mains, un couvre-visage, des mains avec du savon et l’application Rastrea el Virus.",
-      "Body1": "Rastrea el Virus n’est qu’une partie des efforts de santé publique visant à freiner la propagation de la COVID-19.",
+      "ImageAltText": "Dessin à la main de divers moyens de lutter contre la COVID-19, dont un désinfectant pour les mains, un couvre-visage, des mains avec du savon et l’application Alerte COIVID.",
+      "Body1": "Alerte COVID n’est qu’une partie des efforts de santé publique visant à freiner la propagation de la COVID-19.",
       "Body2": "Continuez à suivre les recommandations de santé publique de votre région.",
-      "Body3": "Rastrea el Virus ne remplace pas un avis médical. Si vous tombez malade, contactez votre médecin ou un professionnel de la santé."
+      "Body3": "Alerte COVID ne remplace pas un avis médical. Si vous tombez malade, contactez votre médecin ou un professionnel de la santé."
     },
     "Permissions": {
       "Title": "L’application demandera votre autorisation",
@@ -297,14 +301,14 @@
   "OverlayClosed": {
     "NotificationStatus": "Notifications ",
     "NotificationStatusOff": "désactivées",
-    "SystemStatus": "Rastrea el Virus est ",
+    "SystemStatus": "Alerte COVID est ",
     "SystemStatusOff": "désactivée",
     "SystemStatusOn": "activée",
     "TapPrompt": "Appuyez pour voir le menu"
   },
   "OverlayOpen": {
     "BluetoothCardAction": "Activez Bluetooth",
-    "BluetoothCardBody": "Vous devez l’activer dans les paramètres de votre téléphone pour qu’Rastrea el Virus fonctionne.",
+    "BluetoothCardBody": "Vous devez l’activer dans les paramètres de votre téléphone pour qu’Alerte COVID fonctionne.",
     "EnterCodeCardAction": "Entrer votre clé",
     "EnterCodeCardBody": "Vous avez besoin d’une clé à usage unique pour aviser les autres personnes d’une exposition.",
     "EnterCodeCardBodyDiagnosed": "Merci de faire votre part pour freiner la propagation de la COVID-19. ",
@@ -315,14 +319,16 @@
     "EnterCodeCardTitle": "Vous avez la COVID-19?",
     "EnterCodeCardTitleDiagnosed": "Vous contribuez à freiner la COVID",
     "ExposureNotificationCardAction": "Activez les notifications d’exposition",
-    "ExposureNotificationCardBody": "Rastrea el Virus ne peut pas vous aviser de la découverte d’une exposition potentielle. Le fait d’être notifié rapidement est essentiel pour ralentir la propagation de la COVID-19.",
+    "ExposureNotificationCardBody": "Alerte COVID ne peut pas vous aviser de la découverte d’une exposition potentielle. Le fait d’être notifié rapidement est essentiel pour ralentir la propagation de la COVID-19.",
     "ExposureNotificationCardStatus": "Les notifications d’exposition à la COVID-19 sont ",
     "NotificationCardAction": "Activer les notifications",
-    "NotificationCardBody": "Rastrea el Virus ne peut pas vous aviser dès qu’il découvre une exposition potentielle. Le fait d’être notifié rapidement est essentiel pour ralentir la propagation de la COVID-19.",
+    "NotificationCardBody": "Alerte COVID ne peut pas vous aviser dès qu’il découvre une exposition potentielle. Le fait d’être notifié rapidement est essentiel pour ralentir la propagation de la COVID-19.",
     "NotificationCardStatus": "Les notifications sont désactivées",
     "NotificationCardStatusOff": "DÉSACTIVÉES",
-    "NoConnectivityCardAction": "Rastrea el Virus est hors ligne",
-    "NoConnectivityCardBody": "Connectez-vous à Internet pour aviser les autres personnes ou pour vérifier si vous avez été exposé."
+    "NoConnectivityCardAction": "Alerte COVID est hors ligne",
+    "NoConnectivityCardBody": "Connectez-vous à Internet pour aviser les autres personnes ou pour vérifier si vous avez été exposé.",
+    "EnUnauthorizedCardAction": "Activer Alerte COVID",
+    "EnUnauthorizedCardBody": "Sélectionnez Notifications d’exposition. Faites défiler l’écran et activez « Partager les informations sur les expositions »."
   },
   "Partners": {
     "Label": "Conçu en partenariat avec"
@@ -357,15 +363,15 @@
   "Sharing": {
     "Close": "Fermer",
     "InstagramImageUrl": "https://user-images.githubusercontent.com/5274722/84658989-b9ba6b00-aee4-11ea-84d4-d840527467b4.png",
-    "Message": "Joignez-vous à moi pour aider à ralentir la transmission de la COVID-19. Téléchargez l’application Rastrea el Virus : https://covidshield.app",
+    "Message": "Joignez-vous à moi pour aider à ralentir la transmission de la COVID-19. Téléchargez l’application Alerte COVID : https://covidshield.app",
     "More": "Plus d’applications",
     "Platform-instagram": "Partager avec Instagram",
     "Platform-messages": "Partager avec Messages",
-    "SubTitle": "Chaque personne utilisant Rastrea el Virus aide à ralentir la transmission de la COVID-19. Partager cette application ne partage aucune donnée privée.",
+    "SubTitle": "Chaque personne utilisant Alerte COVID aide à ralentir la transmission de la COVID-19. Partager cette application ne partage aucune donnée privée.",
     "Title": "Partager l’application"
   },
   "ThankYou": {
-    "Body": "Les notifications d’exposition sont activées. Si Rastrea el Virus détecte que vous avez possiblement été exposé(e) à la COVID-19, vous recevrez une notification.",
+    "Body": "Les notifications d’exposition sont activées. Si Alerte COVID détecte que vous avez possiblement été exposé(e) à la COVID-19, vous recevrez une notification.",
     "Dismiss": "OK",
     "Title": "Merci d’aider"
   },
@@ -374,8 +380,8 @@
     "ActionEnd": "Terminé",
     "ActionNext": "Suivant",
     "Close": "Fermer",
-    "step-1": "L’application s’exécute en arrière-plan sans interrompre vos activités.\n\nQuand vous serez près d’une personne ayant Rastrea el Virus, vos téléphones s’échangeront des codes aléatoires toutes les 5\u00A0minutes.\n\nCes codes changent souvent et ne peuvent pas servir à vous identifier.",
-    "step-1Title": "Fonctionnement d’Rastrea el Virus",
+    "step-1": "L’application s’exécute en arrière-plan sans interrompre vos activités.\n\nQuand vous serez près d’une personne ayant Alerte COVID, vos téléphones s’échangeront des codes aléatoires toutes les 5\u00A0minutes.\n\nCes codes changent souvent et ne peuvent pas servir à vous identifier.",
+    "step-1Title": "Fonctionnement d’Alerte COVID",
     "step-1AltText": "Dessin à la main d’un téléphone mobile dans une poche, qui envoie et reçoit des signaux.",
     "step-2": "L’application estime la distance entre vous et d’autres personnes grâce à la puissance des signaux Bluetooth.\n\nSi vous êtes à une distance de moins de 2 mètres pendant plus de 15 minutes, l’application enregistre une exposition.",
     "step-2Title": "Qu’est-ce qu’une exposition?",
@@ -393,7 +399,7 @@
     "Body3": "toute précision sur vous ou sur les personnes à proximité",
     "Body4": "vos informations de santé",
     "Body5": "",
-    "Intro": "Rastrea el Virus n’a aucun moyen de connaître :",
+    "Intro": "Alerte COVID n’a aucun moyen de connaître :",
     "Title": "Complètement anonyme"
   },
   "A11yList": {

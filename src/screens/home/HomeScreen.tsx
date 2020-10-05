@@ -1,8 +1,9 @@
 import React, {useCallback, useEffect, useState, useRef, useLayoutEffect} from 'react';
 import {useNetInfo} from '@react-native-community/netinfo';
-import {DrawerActions, useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import {BottomSheet, BottomSheetBehavior, Box} from 'components';
 import {DevSettings, Linking, Animated} from 'react-native';
+import {TEST_MODE} from 'env';
 import {
   ExposureStatusType,
   SystemStatus,
@@ -24,6 +25,7 @@ import {CollapsedOverlayView} from './views/CollapsedOverlayView';
 import {DiagnosedShareView} from './views/DiagnosedShareView';
 import {DiagnosedView} from './views/DiagnosedView';
 import {ExposureNotificationsDisabledView} from './views/ExposureNotificationsDisabledView';
+import {ExposureNotificationsUnauthorizedView} from './views/ExposureNotificationsUnauthorizedView';
 import {ExposureView} from './views/ExposureView';
 import {NoExposureUncoveredRegionView} from './views/NoExposureUncoveredRegionView';
 import {NoExposureCoveredRegionView} from './views/NoExposureCoveredRegionView';
@@ -65,7 +67,14 @@ const Content = ({setBackgroundColor, isBottomSheetExpanded}: ContentProps) => {
   setBackgroundColor('mainBackground');
 
   const getNoExposureView = (_regionCase: RegionCase) => {
-    return <NoExposureCoveredRegionView isBottomSheetExpanded={isBottomSheetExpanded} />;
+    switch (_regionCase) {
+      case 'noRegionSet':
+        return <NoExposureNoRegionView isBottomSheetExpanded={isBottomSheetExpanded} />;
+      case 'regionActive':
+        return <NoExposureCoveredRegionView isBottomSheetExpanded={isBottomSheetExpanded} />;
+      case 'regionNotActive':
+        return <NoExposureUncoveredRegionView isBottomSheetExpanded={isBottomSheetExpanded} />;
+    }
   };
 
   // this is for the test menu
@@ -84,25 +93,22 @@ const Content = ({setBackgroundColor, isBottomSheetExpanded}: ContentProps) => {
   switch (systemStatus) {
     case SystemStatus.Undefined:
       return null;
-    case SystemStatus.BluetoothOff:
-      return <BluetoothDisabledView />;
+    case SystemStatus.Unauthorized:
+      return <ExposureNotificationsUnauthorizedView isBottomSheetExpanded={isBottomSheetExpanded} />;
     case SystemStatus.Disabled:
     case SystemStatus.Restricted:
       return <ExposureNotificationsDisabledView isBottomSheetExpanded={isBottomSheetExpanded} />;
     case SystemStatus.PlayServicesNotAvailable:
       return <FrameworkUnavailableView isBottomSheetExpanded={isBottomSheetExpanded} />;
-    case SystemStatus.LocationOff:
-      return <LocationOffView isBottomSheetExpanded={isBottomSheetExpanded} />;
-  }
-
-  if (!network.isConnected) {
-    return <NetworkDisabledView />;
   }
 
   switch (exposureStatus.type) {
     case ExposureStatusType.Exposed:
       return <ExposureView isBottomSheetExpanded={isBottomSheetExpanded} />;
     case ExposureStatusType.Diagnosed:
+      if (!network.isConnected) {
+        return <NetworkDisabledView />;
+      }
       return exposureStatus.needsSubmission ? (
         <DiagnosedShareView isBottomSheetExpanded={isBottomSheetExpanded} />
       ) : (
@@ -110,7 +116,14 @@ const Content = ({setBackgroundColor, isBottomSheetExpanded}: ContentProps) => {
       );
     case ExposureStatusType.Monitoring:
     default:
+      if (!network.isConnected) {
+        return <NetworkDisabledView />;
+      }
       switch (systemStatus) {
+        case SystemStatus.BluetoothOff:
+          return <BluetoothDisabledView />;
+        case SystemStatus.LocationOff:
+          return <LocationOffView isBottomSheetExpanded={isBottomSheetExpanded} />;
         case SystemStatus.Active:
           return getNoExposureView(regionCase);
         default:
@@ -123,10 +136,6 @@ const CollapsedContent = (bottomSheetBehavior: BottomSheetBehavior) => {
   const [systemStatus] = useSystemStatus();
   const [notificationStatus, turnNotificationsOn] = useNotificationPermissionStatus();
   const showNotificationWarning = notificationStatus !== 'granted';
-
-  // if (systemStatus === SystemStatus.Unknown) {
-  //   return null;
-  // }
 
   return (
     <CollapsedOverlayView
@@ -146,9 +155,6 @@ const ExpandedContent = (bottomSheetBehavior: BottomSheetBehavior) => {
     Linking.openSettings();
   }, []);
   const turnNotificationsOnFn = notificationStatus === 'blocked' ? toSettings : turnNotificationsOn;
-  // if (systemStatus === SystemStatus.Unknown) {
-  //   return null;
-  // }
 
   return (
     <OverlayView
@@ -163,9 +169,9 @@ const ExpandedContent = (bottomSheetBehavior: BottomSheetBehavior) => {
 export const HomeScreen = () => {
   const navigation = useNavigation();
   useEffect(() => {
-    if (__DEV__) {
-      DevSettings.addMenuItem('Show Test Menu', () => {
-        navigation.dispatch(DrawerActions.openDrawer());
+    if (__DEV__ && TEST_MODE) {
+      DevSettings.addMenuItem('Show Demo Menu', () => {
+        navigation.navigate('TestScreen');
       });
     }
   }, [navigation]);

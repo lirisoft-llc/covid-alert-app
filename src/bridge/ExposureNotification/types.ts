@@ -20,6 +20,8 @@ export enum Status {
   Restricted = 'restricted',
   LocationOff = 'location_off',
   PlayServicesNotAvailable = 'play_services_not_available',
+  Unauthorized = 'unauthorized',
+  Authorized = 'authorized',
 }
 
 export interface TemporaryExposureKey {
@@ -39,7 +41,7 @@ export interface ExposureSummary {
 
 export interface ExposureConfiguration {
   metadata?: object;
-  minimumExposureDurationMinutes?: number;
+  minimumExposureDurationMinutes: number;
   attenuationDurationThresholds: number[];
   attenuationLevelValues: number[];
   attenuationWeight: number;
@@ -64,13 +66,8 @@ export interface ExposureNotification {
   start(): Promise<void>;
   stop(): Promise<void>;
   resetAllData(): Promise<void>;
-
   getStatus(): Promise<Status>;
-  sendEmail(filePath: String): Promise<void>;
-
   getTemporaryExposureKeyHistory(): Promise<TemporaryExposureKey[]>;
-
-  detectExposure(configuration: ExposureConfiguration, diagnosisKeysURLs: string[]): Promise<ExposureSummary>;
-  getExposureInformation(summary: ExposureSummary): Promise<ExposureInformation[]> /* used only by Android */;
-  getPendingExposureSummary(): Promise<ExposureSummary | undefined> /* used only by Android */;
+  detectExposure(configuration: ExposureConfiguration, diagnosisKeysURLs: string[]): Promise<ExposureSummary[]>;
+  getPendingExposureSummary(): Promise<ExposureSummary[] | undefined> /* used only by Android */;
 }

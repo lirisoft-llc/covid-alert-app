@@ -11,13 +11,13 @@
       "NoRegion": {
         "Title": "No exposure detected",
         "Body": "You have not been near anyone who reported a COVID-19 diagnosis through this app.\n\nHowever, in some provinces and territories, people cannot yet report COVID-19 diagnoses through this app.",
-        "AllSetBody": "We’ll let you know as soon as people outside Ontario can report a diagnosis through Rastrea el Virus.\n\nIt’s still helpful to keep Rastrea el Virus on.\n\nThat way, when people are able to report a diagnosis, you’ll find out if you were near them."
+        "AllSetBody": "We’ll let you know as soon as people outside Ontario can report a diagnosis through COVID Alert.\n\nIt’s still helpful to keep COVID Alert on.\n\nThat way, when people are able to report a diagnosis, you’ll find out if you were near them."
       },
       "RegionNotCovered": {
         "Title": "No reporting yet in your area",
-        "Body": "People in your province or territory are not yet able to report a COVID-19 diagnosis through this app.\n\nIt’s still helpful to turn Rastrea el Virus on. That way, when people are able to report a diagnosis, you’ll be notified if you were near them.",
+        "Body": "People in your province or territory are not yet able to report a COVID-19 diagnosis through this app.\n\nIt’s still helpful to turn COVID Alert on. That way, when people are able to report a diagnosis, you’ll be notified if you were near them.",
         "GuidanceUrl": "https://www.canada.ca/en/public-health/services/publications/diseases-conditions/covid-19-how-to-isolate-at-home.html",
-        "AllSetBody": "We’ll let you know as soon as people in your area can report a diagnosis through Rastrea el Virus.\n\nIt’s still helpful to keep Rastrea el Virus on.\n\nThat way, when people are able to report a diagnosis, you’ll find out if you were near them."
+        "AllSetBody": "We’ll let you know as soon as people in your area can report a diagnosis through COVID Alert.\n\nIt’s still helpful to keep COVID Alert on.\n\nThat way, when people are able to report a diagnosis, you’ll find out if you were near them."
       }
     },
     "ExposureDetected": {
@@ -37,6 +37,7 @@
     "How": "Diagnosed with COVID-19?",
     "CTA": "What to do next",
     "HowUrl": "https://www.canada.ca/",
+    "ExposedHelpCTA": "What to do if you’re exposed",
     "DiagnosedView": {
       "Title": "Thanks for helping fight COVID-19",
       "Body1": {
@@ -58,31 +59,36 @@
       "ButtonCTA": "Upload your random codes"
     },
     "BluetoothDisabled": "Bluetooth is off",
-    "EnableBluetoothCTA": "You need to turn on Bluetooth in your phone’s settings so Rastrea el Virus can work.",
+    "EnableBluetoothCTA": "You need to turn on Bluetooth in your phone’s settings so COVID Alert can work.",
     "TurnOnBluetooth": "Turn on Bluetooth",
+    "EnUnauthorized": {
+      "Title": "COVID Alert is off",
+      "Body1": "From the button below, choose Exposure Notifications, then scroll down and turn on \"Share Exposure Information\".",
+      "CTA": "Enable COVID Alert"
+    },
     "EnDisabled": {
-      "Title": "Rastrea el Virus is off",
-      "Body1": "You did not enable Rastrea el Virus. The app needs your permission to work.",
-      "CTA": "Enable Rastrea el Virus",
+      "Title": "COVID Alert is off",
+      "Body1": "You did not enable COVID Alert. The app needs your permission to work.",
+      "CTA": "Enable COVID Alert",
       "AndroidTitle2": "Not sure about turning on Location?",
-      "AndroidBody1": "You need to have Location turned on for Rastrea el Virus to work. To use Bluetooth scanning, Android phones need Location setting on for all apps.",
-      "AndroidBody2a": "Despite that, Rastrea el Virus has ",
+      "AndroidBody1": "You need to have Location turned on for COVID Alert to work. To use Bluetooth scanning, Android phones need Location setting on for all apps.",
+      "AndroidBody2a": "Despite that, COVID Alert has ",
       "AndroidBody2b": "no way of knowing where you are. ",
       "AndroidBody2c": "You can check the app’s permissions in your phone’s settings. You’ll see it does not have permission for location services."
     },
     "FrameworkUnavailable": {
       "Title": "Something went wrong",
-      "Body": "Rastrea el Virus is not supported by your phone’s operating system.\n\nMake sure your operating system is up to date.\n\nIf you have an Android phone, try updating your Google Play Services.",
+      "Body": "COVID Alert is not supported by your phone’s operating system.\n\nMake sure your operating system is up to date.\n\nIf you have an Android phone, try updating your Google Play Services.",
       "CTA": "Get Help"
     },
     "UnknownProblem": {
       "Title": "Something went wrong",
-      "Body": "It looks like your phone cannot support Rastrea el Virus.",
+      "Body": "It looks like your phone cannot support COVID Alert.",
       "CTA": "Get Help"
     },
-    "NoConnectivity": "Rastrea el Virus is offline",
-    "NoConnectivityDetailed": "Rastrea el Virus only checks for exposure if your phone is connected to the Internet.",
-    "AppName": "Rastrea el Virus",
+    "NoConnectivity": "COVID Alert is offline",
+    "NoConnectivityDetailed": "COVID Alert only checks for exposure if your phone is connected to the Internet.",
+    "AppName": "COVID Alert",
     "ExternalLinkHint": "Opens in a new window",
     "LastCheckedMinutes": {
       "One": "Last checked {number} minute ago",
@@ -98,7 +104,7 @@
     }
   },
   "OverlayClosed": {
-    "SystemStatus": "Rastrea el Virus is ",
+    "SystemStatus": "COVID Alert is ",
     "SystemStatusOn": "active",
     "SystemStatusOff": "off",
     "NotificationStatus": "Notifications are ",
@@ -106,7 +112,7 @@
     "TapPrompt": "Tap for menu"
   },
   "OverlayOpen": {
-    "BluetoothCardBody": "You need to turn on Bluetooth in your phone’s settings so Rastrea el Virus can work.",
+    "BluetoothCardBody": "You need to turn on Bluetooth in your phone’s settings so COVID Alert can work.",
     "BluetoothCardAction": "Turn on Bluetooth",
     "EnterCodeCardTitle": "Diagnosed with COVID-19?",
     "EnterCodeCardBody": "You need a one-time key to let people know they’ve been exposed.",
@@ -122,10 +128,12 @@
     "NotificationCardBody": "You will not receive notifications if you’ve been near anyone who has reported a COVID-19 diagnosis. Finding out potential exposures right away is essential to slowing the spread of COVID-19.",
     "NotificationCardAction": "Turn on notifications",
     "ExposureNotificationCardStatus": "Exposure notifications are ",
-    "ExposureNotificationCardBody": "Rastrea el Virus cannot notify you as soon as it learns of a possible exposure. Finding out right away is essential to slowing the spread of COVID-19.",
+    "ExposureNotificationCardBody": "COVID Alert cannot notify you as soon as it learns of a possible exposure. Finding out right away is essential to slowing the spread of COVID-19.",
     "ExposureNotificationCardAction": "Turn on exposure notifications",
-    "NoConnectivityCardAction": "Rastrea el Virus is offline",
-    "NoConnectivityCardBody": "Connect to the Internet to notify people or check for exposures."
+    "NoConnectivityCardAction": "COVID Alert is offline",
+    "NoConnectivityCardBody": "Connect to the Internet to notify people or check for exposures.",
+    "EnUnauthorizedCardAction": "Enable COVID Alert",
+    "EnUnauthorizedCardBody": "Choose Exposure Notifications, then scroll down and turn on \"Share Exposure Information\"."
   },
   "Info": {
     "CheckSymptoms": "Check symptoms",
@@ -139,7 +147,7 @@
     "ChangeRegion": "Change province or territory",
     "Privacy": "How it protects your privacy",
     "SettingsTitle": "Settings",
-    "InformationTitle": "About Rastrea el Virus"
+    "InformationTitle": "About COVID Alert"
   },
   "Landing": {
     "En": "English",
@@ -151,18 +159,16 @@
     "Title": "Language",
     "En": "English (Canada)",
     "Fr": "Français (Canada)",
-    "Es": "Español (Puerto  Rico)",
     "PtBR": "Portuguese (Brazil)",
     "EnShort": "English",
     "FrShort": "Français",
-    "EsShort": "Español",
     "PtBRShort": "Portuguese (Brazil)",
     "Close": "Close"
   },
   "Tutorial": {
-    "step-1Title": "How Rastrea el Virus works",
+    "step-1Title": "How COVID Alert works",
     "step-1AltText": "A hand-drawn illustration of a mobile phone in a pocket, sending and receiving signals.",
-    "step-1": "The app runs in the background and will not interrupt your activities.\n\nWhenever you’re near someone else with Rastrea el Virus, both phones exchange random codes every 5 minutes.\n\nThe random codes change often and cannot be used to identify you. ",
+    "step-1": "The app runs in the background and will not interrupt your activities.\n\nWhenever you’re near someone else with COVID Alert, both phones exchange random codes every 5 minutes.\n\nThe random codes change often and cannot be used to identify you. ",
     "step-2Title": "What’s an exposure?",
     "step-2AltText": "A hand-drawn illustration of 2 mobile phones side-by-side with a timer clock connecting both phones.",
     "step-2": "The app estimates how near people are by the strength of Bluetooth signals.\n\nIf you’re closer than 2 metres for more than 15 minutes, the app will record an exposure.",
@@ -178,12 +184,12 @@
     "Close": "Close"
   },
   "Sharing": {
-    "Title": "Tell your friends about Rastrea el Virus",
-    "SubTitle": "Every person using Rastrea el Virus helps to slow the spread of COVID-19. Sharing this app will not share any of your personal information.",
+    "Title": "Tell your friends about COVID Alert",
+    "SubTitle": "Every person using COVID Alert helps to slow the spread of COVID-19. Sharing this app will not share any of your personal information.",
     "Platform-messages": "Share to Messages",
     "Platform-instagram": "Share to Instagram",
     "More": "More apps",
-    "Message": "Join me in helping to slow the spread of COVID-19. Download the Rastrea el Virus app: https://covidshield.app",
+    "Message": "Join me in helping to slow the spread of COVID-19. Download the COVID Alert app: https://covidshield.app",
     "InstagramImageUrl": "https://user-images.githubusercontent.com/5274722/84658989-b9ba6b00-aee4-11ea-84d4-d840527467b4.png",
     "Close": "Close"
   },
@@ -197,11 +203,11 @@
     "Start": {
       "Title": "Together, let’s stop the spread of COVID-19",
       "ImageAltText": "A hand-drawn illustration with lots of different people in it. Dotted lines show their paths crossing and leading to a smartphone below.",
-      "Body1": "Rastrea el Virus helps us break the cycle of infection. The app can let people know of possible exposures before any symptoms appear. ",
+      "Body1": "COVID Alert helps us break the cycle of infection. The app can let people know of possible exposures before any symptoms appear. ",
       "Body2": "That way, we can take care of ourselves and protect our communities."
     },
     "WhatItsNot": {
-      "Title": "What Rastrea el Virus does not do",
+      "Title": "What COVID Alert does not do",
       "ImageAltText": "A hand-drawn illustration with many houses and a high-rise building on a curving street. Small message bubbles appear above each home.",
       "Body1": "The app will not tell you in the moment if you’re currently near someone who’s been diagnosed.",
       "Body2": "It will not tell you about outbreaks in your community."
@@ -209,7 +215,7 @@
     "Anonymous": {
       "Title": "Your privacy is protected",
       "ImageAltText": "A hand-drawn illustration of shaded glasses and hat to go incognito. Above the hat, a location pin icon is crossed out.",
-      "Body1": "Rastrea el Virus **does not use GPS** or track your location.",
+      "Body1": "COVID Alert **does not use GPS** or track your location.",
       "Body2": "It has **no way of knowing**:",
       "Bullet1": "Your location.",
       "Bullet2": "Your name or address.",
@@ -227,10 +233,10 @@
     },
     "PartOf": {
       "Title": "One part of public health",
-      "ImageAltText": "A hand-drawn illustration of different ways of fighting COVID-19, including hand sanitizer, handwashing, face mask and the Rastrea el Virus app.",
-      "Body1": "Rastrea el Virus is just one part of the public health effort to stop the spread of COVID-19.",
+      "ImageAltText": "A hand-drawn illustration of different ways of fighting COVID-19, including hand sanitizer, handwashing, face mask and the COVID Alert app.",
+      "Body1": "COVID Alert is just one part of the public health effort to stop the spread of COVID-19.",
       "Body2": "Follow all public health guidelines in your area.",
-      "Body3": "Rastrea el Virus does not replace medical advice. If you get sick, contact your doctor or other healthcare provider."
+      "Body3": "COVID Alert does not replace medical advice. If you get sick, contact your doctor or other healthcare provider."
     },
     "Permissions": {
       "Title": "The app will now ask your permission",
@@ -246,7 +252,7 @@
   },
   "ThankYou": {
     "Title": "Thank you for helping",
-    "Body": "Exposure notifications are on. You will receive a message if Rastrea el Virus detects that you’ve been near someone who has reported a COVID-19 diagnosis.",
+    "Body": "Exposure notifications are on. You will receive a message if COVID Alert detects that you’ve been near someone who has reported a COVID-19 diagnosis.",
     "Dismiss": "Dismiss"
   },
   "DataUpload": {
@@ -258,7 +264,7 @@
       "Body1a": "Step 1. ",
       "Body1b": "Enter the one-time key you got when you were diagnosed.",
       "Body2a": "Step 2. ",
-      "Body2b": "Agree that Rastrea el Virus can let people know they were exposed.",
+      "Body2b": "Agree that COVID Alert can let people know they were exposed.",
       "Body3a": "Step 3. ",
       "Body3b": "Allow your phone to share your random codes.",
       "Body4a": "Nobody will get any information about you ",
@@ -270,7 +276,7 @@
       "Title": "Enter your one-time key",
       "Body": "Enter the key you got when you were diagnosed.",
       "Action": "Submit",
-      "InputLabel": "Rastrea el Virus key"
+      "InputLabel": "COVID Alert key"
     },
     "ConsentView": {
       "Title": "Now you can upload your codes",
@@ -279,6 +285,13 @@
       "Body2b": "or the time you were near them.",
       "Body3": "You can help slow the spread of COVID-19 if you agree.",
       "Action": "Agree"
+    },
+    "SymptomOnsetDate": {
+      "Title": "Date you started feeling sick",
+      "Body1": "Enter the date you first noticed you were not feeling well.",
+      "Body2": "This information will never be shared from your phone.",
+      "Body3": "The app will only share exposures from 2 days before this date until today. People will be notified they’ve been exposed.",
+      "CTA": "Share exposures"
     },
     "NoCode": {
       "NoRegion": {
@@ -298,8 +311,8 @@
   "Notification": {
     "ExposedMessageTitle": "You’ve been exposed",
     "ExposedMessageBody": "You’ve had close contact with someone who reported a COVID-19 diagnosis through the app. Learn more about what to do next.",
-    "OffMessageTitle": "Rastrea el Virus is off",
-    "OffMessageBody": "Turn on Rastrea el Virus to get notified if you’ve been near someone who has reported a COVID-19 diagnosis.",
+    "OffMessageTitle": "COVID Alert is off",
+    "OffMessageBody": "Turn on COVID Alert to get notified if you’ve been near someone who has reported a COVID-19 diagnosis.",
     "DailyUploadNotificationTitle": "Upload new random codes",
     "DailyUploadNotificationBody": "Help slow the spread of COVID-19 and upload your new random codes."
   },
@@ -308,12 +321,12 @@
   },
   "BottomSheet": {
     "Collapse": "Close",
-    "OnStatus": "Rastrea el Virus is on, Tap for more information",
-    "OffStatus": "Rastrea el Virus is off, Tap for more information"
+    "OnStatus": "COVID Alert is on, Tap for more information",
+    "OffStatus": "COVID Alert is off, Tap for more information"
   },
   "RegionLanding": {
     "Title": "Choose your province or territory",
-    "Body1": "Provincial and territorial governments are working to support Rastrea el Virus across Canada.",
+    "Body1": "Provincial and territorial governments are working to support COVID Alert across Canada.",
     "Body2": "In some places, people cannot yet report a COVID-19 diagnosis through this app.",
     "RegionSelectBtn": "Choose province or territory"
   },

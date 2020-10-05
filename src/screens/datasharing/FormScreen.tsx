@@ -1,13 +1,13 @@
-import React, {useCallback, useState} from 'react';
-import {Box, CodeInput, Text, Button} from 'components';
-import {useI18n} from 'locale';
-import {useReportDiagnosis} from 'services/ExposureNotificationService';
-import {Alert} from 'react-native';
-import {covidshield} from 'services/BackendService/covidshield';
-import {xhrError} from 'shared/fetch';
-import {useNavigation} from '@react-navigation/native';
+import React, { useCallback, useState } from 'react';
+import { Box, CodeInput, Text, Button } from 'components';
+import { useI18n } from 'locale';
+import { useReportDiagnosis } from 'services/ExposureNotificationService';
+import { Alert } from 'react-native';
+import { covidshield } from 'services/BackendService/covidshield';
+import { xhrError } from 'shared/fetch';
+import { useNavigation } from '@react-navigation/native';
 
-import {BaseDataSharingView} from './components/BaseDataSharingView';
+import { BaseDataSharingView } from './components/BaseDataSharingView';
 
 export const FormScreen = () => {
   const i18n = useI18n();
@@ -15,7 +15,7 @@ export const FormScreen = () => {
   const handleChange = useCallback(text => setCodeValue(text), []);
   const navigation = useNavigation();
   const [loading, setLoading] = useState(false);
-  const {startSubmission} = useReportDiagnosis();
+  const { startSubmission } = useReportDiagnosis();
   const onSuccess = useCallback(() => navigation.navigate('ConsentView'), [navigation]);
 
   const getTranslationKey = (error: any) => {
@@ -35,7 +35,7 @@ export const FormScreen = () => {
     (error: any) => {
       const translationKey = getTranslationKey(error);
       Alert.alert(i18n.translate(`Errors.${translationKey}.Title`), i18n.translate(`Errors.${translationKey}.Body`), [
-        {text: i18n.translate(`Errors.Action`)},
+        { text: i18n.translate(`Errors.Action`) },
       ]);
     },
     [i18n],
@@ -79,7 +79,7 @@ export const FormScreen = () => {
       <Box flex={1} marginHorizontal="m" marginBottom="m">
         <Button
           loading={loading}
-          disabled={codeValue.length < 10}
+          disabled={codeValue.length < 8}
           variant="thinFlat"
           text={i18n.translate('DataUpload.FormView.Action')}
           onPress={onSubmit}

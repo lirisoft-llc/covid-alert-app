@@ -2,11 +2,15 @@ package app.covidshield.module
 
 import android.content.Context
 import android.util.Base64
+import app.covidshield.Manager.AppExecutors
+import app.covidshield.Manager.DiagnosisKeys
 import app.covidshield.extensions.launch
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import com.google.common.util.concurrent.FluentFuture
+import com.google.common.base.Function
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import okhttp3.CacheControl
@@ -39,18 +43,27 @@ class CovidShieldModule(context: ReactApplicationContext) : ReactContextBaseJava
     @ReactMethod
     fun downloadDiagnosisKeysFile(url: String, promise: Promise) {
         promise.launch(this) {
-            val request = Request.Builder()
-                .cacheControl(CacheControl.Builder().noStore().build())
-                .url(url).build()
-            okHttpClient.newCall(request).execute().use { response ->
-                if (response.code() != 200) {
-                    throw IOException()
-                }
-                val bytes = response.body()?.bytes() ?: throw IOException()
-                val fileName = writeFile(bytes)
-                promise.resolve(fileName)
+//            val request = Request.Builder()
+//                .cacheControl(CacheControl.Builder().noStore().build())
+//                .url(url).build()
+//            okHttpClient.newCall(request).execute().use { response ->
+//                if (response.code() != 200) {
+//                    throw IOException()
+//                }
+//                val bytes = response.body()?.bytes() ?: throw IOException()
+//                val fileName = writeFile(bytes)
+//                promise.resolve(fileName)
+
+            val diagnosisKeys = DiagnosisKeys(reactApplicationContext)
+            FluentFuture.from<List<File?>>(diagnosisKeys.downloadKeys(reactApplicationContext))
+                    .transform(
+                            Function { files: List<File?>? ->
+                                promise.resolve(files)
+                                files
+                            },
+                            AppExecutors.getBackgroundExecutor())
+
             }
-        }
     }
 
     private fun writeFile(data: ByteArray): String {

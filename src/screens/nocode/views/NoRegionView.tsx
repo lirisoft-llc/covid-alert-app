@@ -9,6 +9,8 @@ export const NoRegionView = () => {
   const navigation = useNavigation();
   const autoFocusRef = useAccessibilityAutoFocus(true);
 
+  const onChooseRegion = useCallback(() => navigation.navigate('RegionSelect'), [navigation]);
+
   return (
     <Box>
       <Text
@@ -25,6 +27,7 @@ export const NoRegionView = () => {
         text={i18n.translate('DataUpload.NoCode.NoRegion.ChooseRegionCTA')}
         variant="bigFlatDarkGrey"
         internalLink
+        onPress={onChooseRegion}
       />
     </Box>
   );

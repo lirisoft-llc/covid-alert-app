@@ -8,8 +8,9 @@ import {useRegionalI18n} from 'locale/regional';
 export const Tip = () => {
   const i18n = useI18n();
   const regionalI18n = useRegionalI18n();
-  const cta = regionalI18n.translate(`RegionContent.DiagnosedView.Active.ON.Tip.CTA`);
-  const url = regionalI18n.translate(`RegionContent.DiagnosedView.Active.ON.Tip.URL`);
+  const {region} = useStorage();
+  const cta = regionalI18n.translate(`RegionContent.DiagnosedView.Active.${region}.Tip.CTA`);
+  const url = regionalI18n.translate(`RegionContent.DiagnosedView.Active.${region}.Tip.URL`);
 
   if (cta === '' || url === '') {
     return null;
@@ -24,7 +25,7 @@ export const Tip = () => {
         <Box flex={1}>
           <Text>
             <Text fontWeight="bold">{i18n.translate('Home.DiagnosedView.Tip.Title')}</Text>
-            <Text>{regionalI18n.translate(`RegionContent.DiagnosedView.Active.ON.Tip.Body`)}</Text>
+            <Text>{regionalI18n.translate(`RegionContent.DiagnosedView.Active.${region}.Tip.Body`)}</Text>
           </Text>
         </Box>
       </Box>
