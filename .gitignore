@@ -3,7 +3,7 @@
 .DS_Store
 
 
-.env.production
+!.env.production
 
 # Xcode
 #
@@ -92,13 +92,13 @@ ios/GoogleService-Info.plist
 ios/Generated.xcconfig
 android/app/google-services.json
 !.env.example
-.env.*
-.env
+!.env.*
+!.env
 
 # generated files
 ios/assets
 
-.env.release
+!.env.release
 
 artifacts/*
 

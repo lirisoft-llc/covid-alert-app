@@ -133,7 +133,7 @@ Please add the following keys to the `info.plist` file. These keys should not be
 
 ## Customization
 
-You can customize the look and feel of the app largely by editing values found in the [Theme File](https://github.com/CovidShield/mobile/blob/master/src/shared/theme.ts).
+You can customize the look and feel of the app largely by editing values found in the [Theme File](https://github.com/CovidShield/mobile/blob/master/src/shared/theme.ts). It is compatible to work with APHL Key server[https://static.googleusercontent.com/media/www.google.com/en//covid19/exposurenotifications/pdfs/Exposure-Notification-FAQ-v1.2.pdf]. APHL will be granted only to public health authorities.
 
 ## Localization
 
