@@ -2,9 +2,7 @@
 
 # COVID Alert Mobile App
 
-Adapted from https://github.com/CovidShield/mobile (upstream)
-
-This repository implements a React Native client application for Apple/Google's Exposure Notification framework, informed by the [guidance provided by Canada's Privacy Commissioners](https://priv.gc.ca/en/opc-news/speeches/2020/s-d_20200507/).
+This repository modifes the Canada COVID app to work with the APHL (give full form) server that is being rolled out in the US. It implements a React Native client application for Apple/Google's Exposure Notification framework.
 
 ![Lint + Typscript](https://github.com/cds-snc/covid-alert-app/workflows/CI/badge.svg)
 
