@@ -4,7 +4,7 @@
 
 Adapted from https://github.com/CovidShield/mobile (upstream)
 
-This repository implements a React Native client application for Apple/Google's Exposure Notification framework, informed by the guidance provided by Canada's Privacy Commissioners.
+This repository implements a React Native client application for Apple/Google's Exposure Notification framework, informed by the [guidance provided by Canada's Privacy Commissioners](https://priv.gc.ca/en/opc-news/speeches/2020/s-d_20200507/).
 
 ![Lint + Typscript](https://github.com/cds-snc/covid-alert-app/workflows/CI/badge.svg)
 
@@ -17,11 +17,6 @@ This repository implements a React Native client application for Apple/Google's 
 
 <a href="https://apps.apple.com/ca/app/id1520284227?l=fr"><img src="https://www.canada.ca/content/dam/phac-aspc/images/services/diseases-maladies/coronavirus-disease-covid-19/covid-alert/app-store-fra.png" alt="Télécharger dans l'App Store"></a>
 <a href="https://play.google.com/store/apps/details?id=ca.gc.hcsc.canada.stopcovid&hl=fr"><img src="https://www.canada.ca/content/dam/phac-aspc/images/services/diseases-maladies/coronavirus-disease-covid-19/covid-alert/google-play-fra.png" alt="Disponible sur Google Play"></a>
-
-Adapted from <https://github.com/CovidShield/mobile> ([upstream](https://github.com/cds-snc/covid-alert-app/blob/master/FORK.md))
-
-This repository implements a React Native _client application_ for Apple/Google's [Exposure
-Notification](https://www.apple.com/covid19/contacttracing) framework, informed by the [guidance provided by Canada's Privacy Commissioners](https://priv.gc.ca/en/opc-news/speeches/2020/s-d_20200507/).
 
 - [Overview](#overview)
 - [Local development](#local-development)
