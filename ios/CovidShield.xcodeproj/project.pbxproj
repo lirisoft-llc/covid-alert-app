@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* CovidShieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CovidShieldTests.m */; };
+		0BCCFD1F252DAC8F0078C5CA /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCCFD1E252DAC8F0078C5CA /* LocalStore.swift */; };
 		1328B72A4DDB4713970A0673 /* img_0.svg in Resources */ = {isa = PBXBuildFile; fileRef = FAA4C78E2EF7441687865846 /* img_0.svg */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -41,6 +42,7 @@
 		00E356EE1AD99517003FC87E /* CovidShieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidShieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* CovidShieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CovidShieldTests.m; sourceTree = "<group>"; };
+		0BCCFD1E252DAC8F0078C5CA /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* CovidShield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidShield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CovidShield/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CovidShield/AppDelegate.m; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		84D61B8B252213DA00A315DA /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0BCCFD1E252DAC8F0078C5CA /* LocalStore.swift */,
 				84D61B8E252213EC00A315DA /* DownloadedPackage.swift */,
 				84D61B8D252213EC00A315DA /* KeyDownloadManager.swift */,
 				84D61B8C252213EB00A315DA /* CovidShield-Bridging-Header.h */,
@@ -433,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				0BCCFD1F252DAC8F0078C5CA /* LocalStore.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				7482404F246F9C0E009F68EA /* CovidShield.m in Sources */,
 				74B6941E245F15B20077B9DA /* ExposureNotification.m in Sources */,
