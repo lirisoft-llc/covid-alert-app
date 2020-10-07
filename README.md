@@ -2,6 +2,10 @@
 
 # COVID Alert Mobile App
 
+Adapted from https://github.com/CovidShield/mobile (upstream)
+
+This repository implements a React Native client application for Apple/Google's Exposure Notification framework, informed by the guidance provided by Canada's Privacy Commissioners.
+
 ![Lint + Typscript](https://github.com/cds-snc/covid-alert-app/workflows/CI/badge.svg)
 
 *Available for iOS and Android:*
@@ -30,7 +34,7 @@ This app is built using React Native and designed to work well with patterns on 
 
 ## Customization
 
-This app is modified to connect to the google [Exposure Notifications API](https://github.com/google/exposure-notifications-server). The primitive changes are don to connect to the exposure notification server, still exception, edges cases are yet to be done.
+This app is modified to connect to the google [Exposure Notifications API](https://github.com/google/exposure-notifications-server). The primitive changes are done to connect to the exposure notification server, still exception, edges cases are yet to be done. It is compatible to work with [APHL Key server](https://static.googleusercontent.com/media/www.google.com/en//covid19/exposurenotifications/pdfs/Exposure-Notification-FAQ-v1.2.pdf). APHL will be granted only to public health authorities.
 
 ## Local development
 
@@ -133,7 +137,7 @@ Please add the following keys to the `info.plist` file. These keys should not be
 
 ## Customization
 
-You can customize the look and feel of the app largely by editing values found in the [Theme File](https://github.com/CovidShield/mobile/blob/master/src/shared/theme.ts). It is compatible to work with APHL Key server[https://static.googleusercontent.com/media/www.google.com/en//covid19/exposurenotifications/pdfs/Exposure-Notification-FAQ-v1.2.pdf]. APHL will be granted only to public health authorities.
+You can customize the look and feel of the app largely by editing values found in the [Theme File](https://github.com/CovidShield/mobile/blob/master/src/shared/theme.ts). 
 
 ## Localization
 
